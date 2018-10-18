@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
   def index
-    @world = 'world'
+    @products = Product.all
   end
 end
