@@ -4,6 +4,10 @@
 
       <h1>My Products</h1>
 
+      <div class="text-right">
+        <%= link_to "Create new Product", new_product_path, class: "btn btn-warning" %>
+      </div>
+      <br>
       <table class="table">
         <tr>
           <th>ID</th>
@@ -20,7 +24,6 @@
           </tr>
         <% end %>
       </table>
-
     </div>
   </div>
 </div>
