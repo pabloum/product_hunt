@@ -1,10 +1,21 @@
+<div class="product-page">
+  <header class="product-header">
+    <h1><%= @product.name %></h1>
+    <p><%= @product.description %></p>
+    <a href="<%= @product.url %>" class="btn btn-warning btn-lg" target="_blank">Get it!</a>
+  </header>
 
-<div class="container">
-  <div class="row">
-    <div class="col-sm-12">
-      <h1><%= @product.name %></h1>
-      <p><%= @product.description%></p>
-      <a href="<%=@product.url%>" target="_blank">Get it!</a>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-10 offset-1">
+        <div class="votes">
+          <h2>Votes</h2>
+        </div>
+
+        <div class="comments">
+          <h2>Comments</h2>
+        </div>
+      </div>
     </div>
   </div>
 </div>

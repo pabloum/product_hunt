@@ -1,2 +1,15 @@
 @import "bootstrap";
 @import "products";
+
+.navbar-nav > li > a.avatar {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  img { width: 47px; }
+}
+
+.navbar-nav{
+  display:table-row;
+  .nav-item {
+    display: table-cell;
+  }
+}
