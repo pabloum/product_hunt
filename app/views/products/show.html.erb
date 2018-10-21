@@ -3,7 +3,16 @@
     <h1><%= @product.name %></h1>
     <p><%= @product.description %></p>
     <a href="<%= @product.url %>" class="btn btn-warning btn-lg" target="_blank">Get it!</a>
+
+    <% if signed_in? && @product.user == current_user %>
+      <div class="actions">
+        <%= link_to "<span>&#9998;</span>".html_safe, edit_product_path(@product) %>
+        <%= link_to "<span>&#128465;</span>".html_safe, @product, method: :delete, data: { confirm: "Are you sure to delete this product?" } %>
+      </div>      
+    <% end %>
+
   </header>
+
 
   <div class="container">
     <div class="row">
