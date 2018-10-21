@@ -8,7 +8,7 @@
       <div class="actions">
         <%= link_to "<span>&#9998;</span>".html_safe, edit_product_path(@product) %>
         <%= link_to "<span>&#128465;</span>".html_safe, @product, method: :delete, data: { confirm: "Are you sure to delete this product?" } %>
-      </div>      
+      </div>
     <% end %>
 
   </header>
@@ -23,6 +23,27 @@
 
         <div class="comments">
           <h2>Comments</h2>
+
+          <% @product.comments.each do |comment| %>
+            <div class="card text-white bg-dark">
+              <div class="card-header"><img src="<%= Gravatar.new("#{comment.user.email}").image_url %>" class="img-circle" /> <%= comment.user.name %></div>
+              <div class="card-body"><%= comment.body %></div>
+            </div>
+          <% end %>
+
+          <% if signed_in? %>
+            <br>
+            <%= form_for [@product, @product.comments.build] do |f| %>
+              <div class="form-group">
+                <%= f.text_area :body, class: "form-control", placeholder: "Add comment" %>
+              </div>
+
+              <div class="actions text-right">
+                <%= f.submit "Comment", class: "btn btn-primary" %>
+              </div>
+            <% end %>
+          <% end %>
+
         </div>
       </div>
     </div>
