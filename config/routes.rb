@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   post 'login', to: 'sessions#create'
   delete 'logout', to: 'sessions#destroy'
   resources :products do
+    resource :vote, only: [:create, :destroy]
     resources :comments, only: [:create]
   end
     # get '/products', to: 'products#index'

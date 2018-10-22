@@ -10,7 +10,6 @@
         <%= link_to "<span>&#128465;</span>".html_safe, @product, method: :delete, data: { confirm: "Are you sure to delete this product?" } %>
       </div>
     <% end %>
-
   </header>
 
 
@@ -19,6 +18,9 @@
       <div class="col-sm-10 offset-1">
         <div class="votes">
           <h2>Votes</h2>
+          <% @product.votes.each do |vote| %>
+            <img src="<%= Gravatar.new("#{vote.user.email}").image_url %>" class="rounded-circle" />
+          <% end %>
         </div>
 
         <div class="comments">
