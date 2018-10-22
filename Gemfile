@@ -36,6 +36,8 @@ gem 'xmlrpc'
 gem 'annotate'
 
 gem "paperclip", "~> 6.0.0"
+
+gem 'aws-sdk', '~> 2.3'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
