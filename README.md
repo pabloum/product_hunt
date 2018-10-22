@@ -1,3 +1,3 @@
 # README
 
-This project created a copy of [Product Hunt](https://www.producthunt.com/).
+You can visit the deployed web app [here](https://pumo-producthunt.herokuapp.com/)
