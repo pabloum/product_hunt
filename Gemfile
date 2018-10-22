@@ -37,7 +37,7 @@ gem 'annotate'
 
 gem "paperclip", "~> 6.0.0"
 
-gem 'aws-sdk', '~> 1.0.0.rc2'
+gem 'aws-sdk', '~> 2.3'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
