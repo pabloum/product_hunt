@@ -37,6 +37,8 @@ class ProductsController < ApplicationController
   end
 
   def destroy
+    Product.find(params[:id]).votes.destroy_all
+    Product.find(params[:id]).comments.destroy_all
     product = Product.find(params[:id])
     product.destroy
 
