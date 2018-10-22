@@ -34,6 +34,8 @@ gem 'gravatar-ultimate'
 gem 'xmlrpc'
 
 gem 'annotate'
+
+gem "paperclip", "~> 6.0.0"
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
