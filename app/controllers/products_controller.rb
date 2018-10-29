@@ -3,6 +3,9 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all
+    if params[:concept].present?
+      @products = @products.where("name ILIKE ? OR description ILIKE ?", "%#{params[:concept]}%", "%#{params[:concept]}%")
+    end
   end
 
   def new
